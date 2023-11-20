@@ -1,0 +1,404 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --hue: 194;
+    --bg-color: black;
+    --text-color: hsl(var(--hue), 40%, 98%);
+    --primary-color: hsl(var(--hue), 100%, 63%);
+    --controls-bg-color: hsl(var(--hue), 0%, 14%);
+    --button-secondary: hsl(var(--hue), 40%, 98% );
+
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+
+/* configurando responsividade  */
+@media screen and (max-width: 1150px), (max-height: 620px) {
+    #timer {
+        font-size: 4.5rem !important;
+        left: 7.5rem !important;
+        top: 17rem !important ;
+        padding: 0.5rem !important;
+    }
+
+    #controls {
+        left: 3.5rem !important;
+        top: 19rem !important ;
+        gap:0.8rem !important;
+        padding: 1.1rem 2rem !important;
+    }
+    #controlsright{
+        left:26rem !important;
+        top:11rem !important;
+        gap:1rem !important;
+        padding: 3rem 3rem !important;
+    }
+    #controlsright2{
+        left:38rem !important;
+        top:11rem !important;
+        gap:1rem !important;
+        padding: 3rem 3rem !important;
+    }
+    #controlsright3{
+        left:26rem !important;
+        top:23rem !important;
+        gap:1rem !important;
+        padding: 3rem 3rem !important;
+    }
+    #controlsright4 {
+        left:38rem !important;
+        top:23rem !important;
+        gap:1rem !important;
+        padding: 3rem 3rem !important;
+
+}
+button{
+
+    font-size: 3.5rem !important;
+ 
+}
+
+#paisagemButton::after {
+    top: -185% !important;
+    right: -50% !important;
+    font-size: 0.4em !important;
+    padding: 2px !important;
+
+}
+
+/* mudando o os modos para  responsividade */
+#chuvaButton::after {
+    top: -185% !important;
+    left: -50% !important;
+    font-size: 0.4em !important;
+    padding: 3px !important;
+}
+#lareiraButton::after {
+    top:192% !important;
+    left: -50% !important;
+    font-size: 0.4em !important;
+    padding: 3px !important;
+}
+
+
+#cafeteiraButton::after {
+    top:192% !important;
+    right: -50% !important;
+    font-size: 0.4em !important;
+    padding: 3px !important;
+}
+
+}
+
+ /* mudando a cor de acordo com o button clicado  */
+
+ #controlsright.controls-right-clicked button,
+ #controlsright2.controls-right-clicked button,
+ #controlsright3.controls-right-clicked button,
+ #controlsright4.controls-right-clicked button{
+     color: white;
+ }
+
+
+body {
+background-color: var(--bg-color);
+
+background-size: cover;
+background-attachment:fixed;
+background-position: center;
+background-repeat: no-repeat;
+
+color: var(--text-color);
+display: grid;
+height: 100vh;
+place-content: center;
+}
+
+#app {
+    display: grid;
+    justify-items: center;
+}
+
+.flex {
+    display: flex;
+}
+#timer{ 
+    font-size:9rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    position:fixed;
+    left:30rem;
+    top:30rem ;
+    background-color: var(--controls-bg-color);
+    padding: 1rem;
+    border-radius: 1.2rem;
+    z-index: 1;
+}
+ #pause{
+    color:#40e0d0
+}
+#controls{
+    margin-top: 6rem;
+    padding: 2.2rem 4rem;
+    gap:1.6rem;
+    background-color: var(--controls-bg-color);
+    border-radius: 999rem;
+    top: 40rem;
+    position:fixed;
+    left:22rem;
+    z-index: 1;
+}
+
+#controlsright{
+    padding: 4rem 4rem;
+    gap:1.6rem;
+    background-color: var(--controls-bg-color);;
+    border-radius: 2rem;
+   
+    position:fixed;;
+    left:80rem;
+    top:26rem;
+    line-height:0;
+    cursor: pointer;
+  
+}
+#controlsright button {
+    color:green;
+}
+
+
+#controlsright:hover {
+  background-color:green !important;
+
+ 
+}
+#controlsright:hover button {
+   color: white;
+  
+   
+}
+
+
+ 
+#controlsright2{
+    padding: 4rem 4rem;
+    gap:1.6rem;
+    background-color: var(--controls-bg-color);
+    border-radius: 2rem;
+   
+    position:fixed;;
+    left:100rem;
+    top:26rem;
+    line-height:0;
+    cursor: pointer;
+}
+
+#controlsright2 button {
+    color:blue;
+   
+}
+
+
+#controlsright2:hover  {
+  background-color:blue !important;
+
+ 
+}
+#controlsright2:hover button {
+   color: white;
+  
+   
+  }
+ 
+#controlsright3{
+   
+    padding: 4rem 4rem;
+    gap:1.6rem;
+    background-color: var(--controls-bg-color);
+    border-radius: 2rem;
+    position:fixed;;
+    left:80rem;
+    top:46rem;
+    line-height:0;
+    margin-bottom: 6.4rem;
+    cursor: pointer;
+}
+
+
+#controlsright3 button {
+    color:#a18262;
+   
+}
+
+
+#controlsright3:hover {
+  background-color: #a18262 !important;
+
+ 
+}
+#controlsright3:hover button {
+   color: white;
+  
+   
+  }
+#controlsright4{
+    
+    padding: 4rem 4rem;
+    gap:1.6rem;
+    background-color: var(--controls-bg-color);
+    border-radius: 2rem;
+   
+    position:fixed;;
+    left:100rem;
+    top:46rem;
+    line-height:0;
+    cursor: pointer;
+    margin-bottom: 6.4rem;
+}
+#controlsright4 button {
+    color:red;
+
+}
+
+#controlsright4:hover {
+  background-color: red !important;
+ 
+
+ 
+}
+#controlsright4:hover button {
+   color: white;
+  
+   
+  }
+
+button{
+    background-color: transparent;
+    border:0;
+    color:white;
+    cursor:pointer;
+    font-size: 6.4rem;
+ 
+}
+
+#controls button:hover{
+    color:#40e0d0
+}
+
+
+
+/* controls */
+/* esta running  */
+.running .ph-play-circle,
+
+/* esta offline  */
+html:not(.running) .ph-pause-circle
+
+{ 
+    display:none
+}
+
+/* modo CHUVA */
+
+#chuvaButton {
+    position: relative;
+}
+#chuvaButton::after {
+    content: "MODO CHUVA";
+    position: absolute;
+    top:0.5rem; /* Ajuste conforme necessário para a posição do texto */
+    left:calc(100% + 5rem);
+    transform: translateX(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: blue;
+    padding: 6px;
+    border-radius: 5px;
+    visibility: hidden;
+    font-size: 0.5em;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#chuvaButton:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* modo lareira */
+
+#lareiraButton {
+    position: relative;
+}
+#lareiraButton::after {
+    content: "MODO LAREIRA";
+    position: absolute;
+    top:0.5rem; /* Ajuste conforme necessário para a posição do texto */
+    left:calc(100% + 5rem);
+    transform: translateX(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: red;
+    padding: 6px;
+    border-radius: 5px;
+    visibility: hidden;
+    font-size: 0.5em;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#lareiraButton:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* modo paisagem */
+
+#paisagemButton {
+    position: relative;
+}
+#paisagemButton::after {
+    content: "MODO PAISAGEM";
+    position: absolute;
+    top:0.5rem; /* Ajuste conforme necessário para a posição do texto */
+    right:calc(100% + 5rem);
+    transform: translateX(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: green;
+    padding: 6px;
+    border-radius: 5px;
+    visibility: hidden;
+    font-size: 0.5em;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#paisagemButton:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* modo cafeteira */
+
+#cafeteiraButton {
+    position: relative;
+}
+#cafeteiraButton:after {
+    content: "MODO CAFETERIA";
+    position: absolute;
+    top:0.5rem; /* Ajuste conforme necessário para a posição do texto */
+    right:calc(100% + 5rem);
+    transform: translateX(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color:#a18262;
+    padding: 6px;
+    border-radius: 5px;
+    visibility: hidden;
+    font-size: 0.47em;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#cafeteiraButton:hover::after {
+    opacity: 1;
+    visibility: visible;
+}

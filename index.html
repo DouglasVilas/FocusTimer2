@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Timer 2</title>
+
+    <meta name="description" content="Temporizador estilo pomodoro">
+   
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src= "src/main.js" defer></script>
+
+
+    <link rel="icon" href="assets/imagens/focus.png" >
+</head>
+
+<body>
+    <div id="app">
+        
+        <section id="timer" class="flex">
+            <span id="minutes">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+        </section>
+
+        <section id="controls" class="flex">
+            <button data-action="toggleRunning" 
+            class="ph ph-play-circle"></button>
+            
+            <button id="pause" data-action="toggleRunning" 
+            class="ph ph-pause-circle "></button>
+            
+            <button data-action="reset" 
+            class="ph ph-stop-circle"></button>
+            
+            <button data-action="plus" 
+             class="ph ph-plus"></button>
+            
+             <button data-action="minus"  
+             class="ph ph-minus"></button>
+        
+        </section> 
+             
+        <!-- adicionando mais imagens  -->
+        
+            <section id="controlsright" class="flex controls-color">
+            <button id="paisagemButton" data-action="paisagem" data-color="green" 
+            class="ph ph-tree"></button>
+        </section>
+            
+        <section id="controlsright2" class="flex controls-color ">
+            <button id="chuvaButton" data-action="chuva"  data-color="blue" 
+            class="ph ph-cloud-snow"></button>
+        </section>
+        
+        <section id="controlsright3" class="flex controls-color">
+        <button id="cafeteiraButton" data-action="cafeteira"  data-color="#a18262"
+            class="ph ph-coffee"></button>
+        </section>
+        
+        <section id="controlsright4" class="flex controls-color">
+            <button id="lareiraButton" data-action="lareira" data-color="red"
+            class="ph ph-fire"></button>
+        </section>
+
+
+    </div>
+</body>
+</html>
